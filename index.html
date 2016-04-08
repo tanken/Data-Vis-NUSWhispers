@@ -86,7 +86,7 @@
     }*/
   </style>
 </head>
-<body data-spy="scroll" data-target="#myScrollspy" data-offset="10">
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="120">
 
 <div class="container">
   <h1>NUS<em style="color: #fff819">Whispers</em> Stats</h1>
@@ -94,9 +94,11 @@
   <div class="row">
     
     <div class="col-md-10 col-xs-10">
-      <div id="about">    
-        <h2>About</h2>
+      <div id="">
         <img src="poem.jpg" style="max-width:70%; margin-left:auto; margin-right:auto; display:block;">
+      </div>
+      <div id="about">    
+        <h2>Introduction</h2>
         <p> Content as of 20 March</p>
         <br>
         <br>
@@ -179,8 +181,8 @@
     </div>
 
     <nav class="col-md-2 col-xs-1" id="myScrollspy">
-      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="60">
-        <li class="active"><a href="#about">About</a></li>
+      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="0">
+        <li class="active"><a href="#about">Intro</a></li>
         <li><a href="#timeline">Timeline</a></li>
         <li><a href="#wordle">Wordle</a></li>
         <li><a href="#clock">Clock</a></li>
@@ -202,7 +204,7 @@
 <script type="text/javascript">
     $('#myScrollspy').affix({
           offset: {
-            top: 50
+            top: 120
           }
     });
 
