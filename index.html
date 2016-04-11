@@ -94,22 +94,31 @@
 
     @media screen and (max-width: 1180px) and (min-width: 981px) {
       #termbreak, #recessweek, #public, #exam {
-          top:845px;
+          top:1015px;
           margin-left:10px;
+      }
+      #termbreak2, #recessweek2, #public2, #exam2 {
+          height:584px;
       }
     }
 
     @media screen and (min-width: 1181px) {
       #termbreak, #recessweek, #public, #exam {
-          top:924px;
+          top:1094px;
           margin-left:39px;
+      }
+      #termbreak2, #recessweek2, #public2, #exam2 {
+          height:584px;
       }
     }
 
     @media screen and (max-width: 980px) {
       #termbreak, #recessweek, #public, #exam {
-          top:819px;
+          top:1045px;
           margin-left:10px;
+      }
+      #termbreak2, #recessweek2, #public2, #exam2 {
+          height:560px;
       }
     }
 
@@ -129,7 +138,7 @@
       <div id="about" style="padding-right:25px; padding-left:40px;">    
         <h2>Introduction</h2>
         <br>
-        <p> This project aims to use data obtained from the NUSWhispers website and Facebook page to create visualizations that offers insights into the salient issues that occupy the minds of anonymous NUS confessors. We also aim to uncover the habitual timings of the confessors.</p>
+        <p>This project aims to use data obtained from the NUSWhispers website and Facebook page to create visualizations that offers insights into the salient issues that occupy the minds of anonymous NUS confessors. We also aim to uncover the habitual timings of the confessors.</p>
         <br>
         <p>A total of 12606 posts were collected from 5th April 2015 to 20 March 2016. </p>
         <br>
@@ -138,20 +147,23 @@
       </div>
       <!--<div id='termbreak' class='' style='max-width:95%; height:100%; position: absolute; top: 75px; '>-->
       <div id='termbreak' class='' style='max-width:100%; height:100%; position: absolute; display:none;'>
-        <img src='Term-Breaks.png' style='width: 864px; height: 584px;'>
+        <img id='termbreak2' src='Term-Breaks.png' style='width: 864px; '>
       </div>
       <div id='recessweek' class='' style='max-width:100%; height:100%; position: absolute; display:none;'>
-        <img src='Recess-Week.png' style='width: 864px; height: 584px;'>
+        <img id='recessweek2' src='Recess-Week.png' style='width: 864px; '>
       </div>
       <div id='public' class='' style='max-width:100%; height:100%; position: absolute; display:none;'>
-        <img src='Public-Holidays.png' style='width: 864px; height: 584px;'>
+        <img id='public2' src='Public-Holidays.png' style='width: 864px; '>
       </div>
       <div id='exam' class='' style='max-width:100%; height:100%; position: absolute; '>
-        <img src='Examinations.png' style='width: 864px; height: 584px;'>
+        <img id='exam2' src='Examinations.png' style='width: 864px; '>
       </div>    
       <div id="timeline" class='tableauPlaceholder center-block' style='max-width:100%; height:100%; position:absolute; top:0px;'>         
         <h2>Seasonal Revelations</h2>
         <br>
+        <p>This timegraph displays the number and type of confessions submitted over the past year. Posts were broadly categorized into Education, Relationship, Health and Lost n Found. By selecting the different confession categories, one can compare and contrast different categories and their frequency at different times of the year. Particular seasons such as holidays and exam periods can be toggled to offer different insights. The largest spike in April 2015 was due to the launch of the Website during the NUS School of Computing project showcase.</p>
+        <br>
+
         <div class="text-center">
         <button id="tb" type="button" class="btn btn-default" style="font-size:18px;">Term Breaks</button>
         <button id="ph" type="button" class="btn btn-default" style="font-size:18px;">Public Holidays</button>
@@ -165,7 +177,7 @@
           </a>
         </noscript>
 
-        <object id="timeline2" class='tableauViz' width='884' height='730' style='display:none;'>
+        <object id="timeline2" class='tableauViz' width='884' height='910' style='display:none;'>
           <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
           <param name='site_root' value='' />
           <param name='name' value='NUSWhispers8april&#47;Dashboard2' />
@@ -186,6 +198,7 @@
         <br>     
         <h2>Delving Into Their Minds</h2>
         <br>
+        <p>The wordclouds showcase the usage of keywords within each category, with size being the distinguishing factor for highest frequency. A large variety of words can be identified from each category, signalling the most common type of phrases used in confessions of each type. This provides insights into the type of language used and the topics most salient in the minds of NUS confessors.</p>
         <br>
         <div class="col-md-3 col-xs-10" style="width: 310px; height: 310px; padding-bottom: 30px;">
             <script src="http://cdn.tagul.com/embed/ay420jwufyck"></script>
