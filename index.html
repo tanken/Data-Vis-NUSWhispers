@@ -95,6 +95,7 @@
     @media screen and (max-width: 1180px) and (min-width: 981px) {
       #termbreak, #recessweek, #public, #exam {
           top:845px;
+          left:10px;
       }
     }
 
@@ -135,25 +136,25 @@
       </div>
       <!--<div id='termbreak' class='' style='max-width:95%; height:100%; position: absolute; top: 75px; '>-->
       <div id='termbreak' class='' style='max-width:100%; height:100%; position: absolute; display:none;'>
-        <img src='Term-Breaks.png' style='width: 900px; height: 557px;'>
+        <img src='Term-Breaks.png' style='width: 864px; height: 584px; margin-left:39px;'>
       </div>
       <div id='recessweek' class='' style='max-width:100%; height:100%; position: absolute; display:none;'>
-        <img src='Recess-Week.png' style='width: 900px; height: 557px;'>
+        <img src='Recess-Week.png' style='width: 864px; height: 584px; margin-left:39px;'>
       </div>
       <div id='public' class='' style='max-width:100%; height:100%; position: absolute; display:none;'>
-        <img src='Public-Holidays.png' style='width: 900px; height: 557px;'>
+        <img src='Public-Holidays.png' style='width: 864px; height: 584px; margin-left:39px;'>
       </div>
       <div id='exam' class='' style='max-width:100%; height:100%; position: absolute; '>
-        <img src='Examinations.png' style='width: 900px; height: 557px;'>
+        <img src='Examinations.png' style='width: 864px; height: 584px; margin-left:39px;'>
       </div>    
       <div id="timeline" class='tableauPlaceholder center-block' style='max-width:100%; height:100%; position:absolute; top:0px;'>         
         <h2>Seasonal Revelations</h2>
         <br>
         <div class="text-center">
-        <button id="tb" type="button" class="btn btn-primary" style="font-size:18px;">Term Breaks</button>
-        <button id="ph" type="button" class="btn btn-success" style="font-size:18px;">Public Holidays</button>
-        <button id="rw" type="button" class="btn btn-info" style="font-size:18px;">Recess Week</button>
-        <button id="ex" type="button" class="btn btn-warning" style="font-size:18px;">Exams</button>
+        <button id="tb" type="button" class="btn btn-default" style="font-size:18px;">Term Breaks</button>
+        <button id="ph" type="button" class="btn btn-default" style="font-size:18px;">Public Holidays</button>
+        <button id="rw" type="button" class="btn btn-default" style="font-size:18px;">Recess Week</button>
+        <button id="ex" type="button" class="btn btn-default active" style="font-size:18px;">Exams</button>
         </div>
         <br>
         <noscript>
@@ -250,18 +251,38 @@
 
     $("#tb").click(function(){
         $("#termbreak").toggle();
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+        $("#recessweek").css("display", "none");
+        $("#public").css("display", "none");
+        $("#exam").css("display", "none")
     });
 
     $("#rw").click(function(){
         $("#recessweek").toggle();
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+        $("#termbreak").css("display", "none");
+        $("#public").css("display", "none");
+        $("#exam").css("display", "none")
     });
 
     $("#ph").click(function(){
         $("#public").toggle();
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+        $("#recessweek").css("display", "none");
+        $("#termbreak").css("display", "none");
+        $("#exam").css("display", "none")
     });
 
     $("#ex").click(function(){
         $("#exam").toggle();
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+        $("#recessweek").css("display", "none");
+        $("#public").css("display", "none");
+        $("#termbreak").css("display", "none")
     });
 
 
